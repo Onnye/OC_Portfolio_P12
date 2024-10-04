@@ -1,0 +1,45 @@
+/*
+ * Light mode theme 
+ */
+
+:root[data-theme="light"] {
+  --bg-color: #ffffffbe;
+  --bg-light-color: #f0f0f0;
+  --card-color: #ffffff;
+  --nav-color: #ffffff;
+  --button-color: #5c5b5b;
+  --shadow: rgba(220, 220, 233, 0.6);
+
+  --primary-color: #4f46e5;
+  --primary-color-rgb: 220, 142, 224;
+
+  --text-primary-color: #111111;
+  --text-primary-color-58: rgba(17, 17, 17, 0.584);
+  --text-secondary-color: #48494a;
+
+  --logo-color: #000000;
+  --filter-color: #4e46e5a8;
+}
+
+/*
+ * Dark mode theme 
+ */
+
+:root[data-theme="dark"] {
+  --bg-color: #1c1c27;
+  --bg-light-color: #1c1e27;
+  --card-color: #171721;
+  --nav-color: #191924;
+  --button-color: #854ce6;
+  --shadow: rgba(25, 25, 36, 0.6);
+
+  --primary-color: #854ce6;
+  --primary-color-rgb: 133, 76, 230;
+
+  --text-primary-color: #f2f3f4;
+  --text-primary-color-58: rgba(242, 243, 244, 0.584);
+  --text-secondary-color: #b1b2b3;
+
+  --logo-color: #ffffff;
+  --filter-color: #8e7cdc;
+}

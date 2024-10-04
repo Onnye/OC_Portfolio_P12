@@ -1,0 +1,176 @@
+.nav {
+  background-color: var(--nav-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  padding: 0 24px;
+  max-width: 1200px;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  color: var(--logo-color);
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .logoWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .logoImage {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navLogo .logoImage {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navLink {
+  color: var(--text-primary-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 16px; // Ajoute un espace entre le bouton de bascule et le bouton GitHub
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.githubButton {
+  border: 1.8px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 10px 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.6s ease-in-out;
+
+  &:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.navActionsMobile {
+  display: none;
+  align-items: center;
+  gap: 16px;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    position: relative;
+    gap: 10px;
+  }
+}
+
+.mobileIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-primary-color);
+}
+
+.mobileMenu {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: var(--shadow); // Ajouter la transparence
+    transition: all 0.6s ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
+    z-index: -1;
+
+    &.open {
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 1000;
+    }
+  }
+}
+
+.mobileLink {
+  color: var(--text-primary-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  padding: 10px 40px;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+
+  &.active {
+    border-bottom: 2px solid var(--primary-color);
+  }
+}
+
+.mobileButton {
+  color: white;
+  width: max-content;
+  padding: 10px 16px;
+  border-radius: 20px;
+  background: var(--primary-color);
+  margin: 10px 35px;
+  &:hover {
+    color: white;
+  }
+}
