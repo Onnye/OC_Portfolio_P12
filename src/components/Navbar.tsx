@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaBars } from "react-icons/fa";
 import styles from "../styles/components/navbar.module.scss";
-import SetTheme from "./theme.util";
+import SetTheme from "./SetTheme";
 import Logo from "./Logo";
 
 const Navbar = () => {

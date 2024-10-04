@@ -1,21 +1,15 @@
-/*
- * Theme toggle button container
- */
 .toggle {
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1/1;
   height: 3rem;
   width: auto;
-  margin: 0;
   background-color: transparent;
   border: none;
-}
+  transition: fill 0.3s ease;
 
-.toggle svg {
-  display: block;
-  position: relative;
-  fill: var(--primary-color);
+  svg {
+    fill: var(--primary-color);
+  }
 }
