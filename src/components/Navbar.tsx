@@ -126,11 +126,6 @@ const Navbar = () => {
               Services
             </a>
           </li>
-          <li>
-            <a href="/blog" className={styles.navLink}>
-              Blog
-            </a>
-          </li>
         </ul>
         <div className={styles.navActions}>
           <SetTheme onThemeChange={handleThemeChange} />
@@ -167,9 +162,6 @@ const Navbar = () => {
               onClick={(e) => handleScrollToSection(e, "services")}
             >
               Services
-            </a>
-            <a href="/blog" className={styles.mobileLink}>
-              Blog
             </a>
             <a
               href="/contact"
