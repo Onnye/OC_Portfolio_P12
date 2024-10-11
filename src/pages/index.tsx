@@ -1,6 +1,8 @@
 import React from "react";
 import Head from "next/head";
 
+import HeroSection from "../components/HeroSection";
+
 const Home = () => {
   return (
     <>
@@ -44,7 +46,9 @@ const Home = () => {
           content="Je conçois des sites web optimisés pour la performance et le SEO."
         />
       </Head>
-      <main></main>
+      <main>
+        <HeroSection />
+      </main>
     </>
   );
 };
