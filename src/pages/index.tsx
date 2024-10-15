@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import HeroSection from "../components/HeroSection";
+import Skills from "../components/Skills";
 
 const Home = () => {
   return (
@@ -48,6 +49,9 @@ const Home = () => {
       </Head>
       <main>
         <HeroSection />
+        <div className="wrapper">
+          <Skills />
+        </div>
       </main>
     </>
   );

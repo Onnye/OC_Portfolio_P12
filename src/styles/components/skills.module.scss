@@ -1,0 +1,133 @@
+.container {
+  background: linear-gradient(
+    450.07deg,
+    rgba(132, 59, 206, 0.06) 5.71%,
+    rgba(132, 59, 206, 0) 99.83%
+  );
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  padding: 10px 0px 100px 0;
+  perspective: 1000px; /* Ajoute la perspective */
+}
+
+.wrapp {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  font-size: 42px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: var(--text-primary-color);
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 32px;
+  }
+}
+
+.desc {
+  font-size: 18px;
+  text-align: center;
+  max-width: 600px;
+  color: var(--text-secondary-color);
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.skillsContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  gap: 30px;
+  justify-content: center;
+}
+
+.skill {
+  width: 100%;
+  max-width: 500px;
+  background: var(--card-color);
+  border: 0.1px solid var(--primary-color);
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border-radius: 16px;
+  padding: 18px 36px;
+  transform-style: preserve-3d; /* Pour permettre la transformation 3D */
+  transition: transform 0.1s, box-shadow 0.1s; /* Ajoute la transition pour la transformation et l'ombre */
+  @media (max-width: 768px) {
+    max-width: 400px;
+    padding: 10px 36px;
+  }
+  @media (max-width: 500px) {
+    max-width: 330px;
+    padding: 10px 36px;
+  }
+}
+
+.skill:hover {
+  transform: rotateY(20deg); /* Rotation 3D sur hover */
+}
+
+.skillTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-secondary-color);
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  transform: translateZ(50px); /* Ajout de la transformation 3D */
+}
+
+.skillList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  transform: translateZ(40px); /* Ajout de la transformation 3D */
+}
+
+.skillItem {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-primary-color-58);
+  border: 1px solid var(--text-primary-color-58);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transform: translateZ(30px); /* Ajout de la transformation 3D */
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  @media (max-width: 500px) {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+.skillImage {
+  width: 24px;
+  height: 24px;
+  transform: translateZ(20px); /* Ajout de la transformation 3D */
+}
