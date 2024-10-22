@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 
 import HeroSection from "../components/HeroSection";
 import Skills from "../components/Skills";
+import Projects from "../components/Projects";
 
 const Home = () => {
+  const [openModal, setOpenModal] = useState({ state: false, project: null });
+
   return (
     <>
       <Head>
-        <meta charSet="UTF-8" />
         {/* Favicon */}
-
         <title>Laura TUFO - Développeuse Web | Frontend</title>
         {/* Meta tags globally applicable */}
+        <meta charSet="UTF-8" />
         <meta name="author" content="Laura TUFO" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
@@ -52,6 +54,7 @@ const Home = () => {
         <div className="wrapper">
           <Skills />
         </div>
+        <Projects openModal={openModal} setOpenModal={setOpenModal} />
       </main>
     </>
   );

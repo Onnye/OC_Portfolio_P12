@@ -82,7 +82,7 @@ export const projects = [
     date: "Aout 2024",
     description:
       "Ce projet est en fait le site sur lequel vous naviguez actuellement. J'ai utilisé le framework Next.js pour ses nombreux avantages, notamment la gestion optimale du SEO. Ce site est également codé avec TypeScript et SASS. Le blog intégré permet un tri efficace par catégories et tags, offrant une navigation intuitive et organisée.",
-    image: "/images/portfolio.webp",
+    image: "/images/projects/portfolio.webp",
     tags: ["Next JS", "Typescript", "SASS"],
     category: "web site",
     github: "https://github.com/Onnye",
@@ -94,7 +94,7 @@ export const projects = [
     date: "Juin 2024",
     description:
       "Projet de formation : Après des audits Lighthouse et Wave, j'ai amélioré les scores de performances et d'accessibilité du site. J'ai également ajouté des données enrichies afin d'optimiser le référencement local",
-    image: "/images/nina_carducci.webp",
+    image: "/images/projects/nina_carducci.webp",
     tags: ["SEO", "Performance", "Accessibilité"],
     category: "others",
     github: "https://github.com/Onnye/OC_NinaCarducci_P8",
@@ -106,7 +106,7 @@ export const projects = [
     date: "May 2024 - Aug 2024",
     description:
       "Projet de formation : L'objectif consistait à débugger le site d'une agence d'événementiel appelée 724events avec des tests unitaires et fonctionnel, puis remplir un cahier de recette.",
-    image: "/images/724events.webp",
+    image: "/images/projects/724events.webp",
     tags: ["React JS", "Node JS"],
     category: "others",
     github: "https://github.com/Onnye/OC_724events_P9",

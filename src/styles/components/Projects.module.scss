@@ -1,0 +1,146 @@
+.container {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  padding-bottom: 70px;
+  gap: 12px;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  font-size: 42px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: var(--text-primary-color);
+
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 24px;
+  }
+}
+
+.desc {
+  font-size: 18px;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 0;
+  color: var(--text-secondary-color);
+
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 12px;
+  }
+}
+
+.navPills {
+  width: 72%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  border-radius: 50px;
+  background-color: var(--card-color);
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ajouté pour permettre la flexibilité sur les petits écrans */
+
+  @media (max-width: 480px) {
+    width: 100%; /* Prend toute la largeur sur les petits écrans */
+  }
+
+  .navLink {
+    flex: 1;
+    background-color: transparent;
+    padding: 17px 0;
+    color: var(--text-primary-color);
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    z-index: 0;
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    &.active::before {
+      width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background: linear-gradient(
+        90.21deg,
+        var(--primary-color) -20.91%,
+        var(--filter-color) 111.58%
+      );
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s ease-in-out;
+    }
+
+    @media (max-width: 650px) {
+      flex: 1 1 50%; /* Ajuste la largeur des liens sur les petits écrans */
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 320px) {
+      flex: 1 1 100%; /* Prend toute la largeur sur les très petits écrans */
+      padding: 8px 0;
+      font-size: 12px;
+    }
+  }
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
